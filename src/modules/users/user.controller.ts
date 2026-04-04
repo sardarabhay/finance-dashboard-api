@@ -29,12 +29,13 @@ export const getUserById = async (
 };
 
 export const getMe = async (
-  req: Request<{ id: string }>,
+  req: Request,
   res: Response,
   next: NextFunction
 ) => {
   try {
-    const user = await userService.getUserById(req.user!.id);
+    const authUser = req.user!;
+    const user = await userService.getUserById(authUser.id);
     res.json(ApiResponse.ok(user));
   } catch (err) {
     next(err);
@@ -60,7 +61,8 @@ export const deleteUser = async (
   next: NextFunction
 ) => {
   try {
-    if (req.params.id === req.user!.id) {
+    const authUser = req.user!;
+    if (req.params.id === authUser.id) {
       throw new Error('Cannot deactivate your own account');
     }
     await userService.deleteUser(req.params.id);
