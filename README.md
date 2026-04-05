@@ -405,7 +405,8 @@ src/
 ├── utils/            # ApiResponse, ApiError, Prisma client singleton
 ├── types/            # Express type augmentation (req.user)
 ├── routes/           # Root router
-└── app.ts            # Express app setup
+├── app.ts            # Express app setup (middleware, routes)
+└── server.ts         # Entry point — starts server and DB connection
 ```
 
 ---
