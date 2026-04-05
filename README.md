@@ -2,6 +2,14 @@
 
 A role-based finance data management backend built with Node.js, Express, TypeScript, Prisma, and SQLite.
 
+## Deployed Link
+
+Live API: https://finance-dashboard-api-production-765d.up.railway.app
+
+Quick checks:
+- Health check: https://finance-dashboard-api-production-765d.up.railway.app/health
+- API base: https://finance-dashboard-api-production-765d.up.railway.app/api/v1
+
 ---
 
 ## Tech Stack
