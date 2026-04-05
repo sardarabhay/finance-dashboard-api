@@ -6,6 +6,8 @@ A role-based finance data management backend built with Node.js, Express, TypeSc
 
 Live API: https://finance-dashboard-api-production-765d.up.railway.app
 
+API Documentation: https://finance-dashboard-api-production-765d.up.railway.app/api-docs
+
 Quick checks:
 - Health check: https://finance-dashboard-api-production-765d.up.railway.app/health
 - API base: https://finance-dashboard-api-production-765d.up.railway.app/api/v1
