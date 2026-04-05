@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import * as userService from './user.service';
 import { ApiResponse } from '../../utils/ApiResponse';
+import { ApiError } from '../../utils/ApiError';
 
 export const getAllUsers = async (
   _req: Request,
@@ -63,7 +64,7 @@ export const deleteUser = async (
   try {
     const authUser = req.user!;
     if (req.params.id === authUser.id) {
-      throw new Error('Cannot deactivate your own account');
+      throw ApiError.badRequest('Cannot deactivate your own account');
     }
     await userService.deleteUser(req.params.id);
     res.json(ApiResponse.ok(null, 'User deactivated'));

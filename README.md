@@ -122,7 +122,7 @@ POST /api/v1/auth/register
 ```json
 {
   "name": "Abhay Sardar",
-  "email": "sardarabhay90@gmail.com",
+  "email": "abhay@test.com",
   "password": "secret123",
   "role": "ADMIN"
 }
@@ -137,7 +137,7 @@ POST /api/v1/auth/register
   "data": {
     "id": "clx1...",
     "name": "Abhay Sardar",
-    "email": "sardarabhay90@gmail.com",
+    "email": "abhay@test.com",
     "role": "ADMIN"
   }
 }
@@ -151,7 +151,7 @@ POST /api/v1/auth/login
 ```
 ```json
 {
-  "email": "sardarabhay90@gmail.com",
+  "email": "abhay@test.com",
   "password": "secret123"
 }
 ```
@@ -166,7 +166,7 @@ POST /api/v1/auth/login
     "user": {
       "id": "clx1...",
       "name": "Abhay Sardar",
-      "email": "sardarabhay90@gmail.com",
+      "email": "abhay@test.com",
       "role": "ADMIN"
     }
   }
