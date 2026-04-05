@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch src --ext ts --exec ts-node --files src/server.ts",
-    "build": "tsc",
+    "build": "npm run prisma:generate && tsc",
     "start": "node dist/server.js",
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "npm run prisma:generate && ts-node prisma/seed.ts",
+    "prisma:generate": "prisma generate",
+    "postinstall": "prisma generate"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
@@ -28,6 +30,7 @@
     "jsonwebtoken": "^9.0.3",
     "morgan": "^1.10.1",
     "pg": "^8.20.0",
+    "prisma": "^7.6.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
@@ -38,7 +41,6 @@
     "@types/morgan": "^1.9.10",
     "@types/node": "^25.5.0",
     "nodemon": "^3.1.14",
-    "prisma": "^7.6.0",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.2"
   }
